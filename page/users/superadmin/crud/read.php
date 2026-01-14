@@ -205,7 +205,6 @@ echo '<thead>';
 echo '<tr>';
 echo '<th>ID</th>';
 echo '<th>UserName</th>';
-echo '<th>PassWord</th>';
 echo '<th>FullName</th>';
 echo "<th>Role_id</th>";
 echo "<th>Province_id</th>";
@@ -220,7 +219,6 @@ while ($row = $pdoResult->fetch(PDO::FETCH_ASSOC)) {
     echo '<tr>';
     echo "<td scope=\"col\">$id</td>";
     echo "<td scope=\"col\">$UserName</td>";
-    echo "<td scope=\"col\">$PassWord</td>";
     echo "<td scope=\"col\">$FullName</td>";
     echo "<td scope=\"col\">$role_id</td>";
     echo "<td scope=\"col\">$province_id</td>";

@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Crops Monitoring System</title>
+  <title>Farm Management System</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -58,7 +58,7 @@
     <div class="d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center">
         <img src="assets/img/logo.png" alt="">
-        <span class="d-none d-lg-block">Crop Monitoring Sys.</span>
+        <span class="d-none d-lg-block">Farms Management System</span>
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
     </div><!-- End Logo -->
@@ -80,7 +80,7 @@
         </li>
     </nav>
 
-  </header><!-- End Header -->
+  </header><!-- End Header --> hi this is 
 
   <!-- ======= Sidebar ======= -->
   <aside id="sidebar" class="sidebar">
@@ -101,7 +101,13 @@
     <li class="nav-item">
       <a class="nav-link" href="read.php">
         <i class="bi bi-person"></i>
-        <span>Adduser</span>
+        <span>User Management</span>
+      </a>
+    </li>
+     <li class="nav-item">
+      <a class="nav-link" href="create.php">
+        <i class="bi bi-person"></i>
+        <span>User Registry</span>
       </a>
     </li>
     <li class="nav-item">
@@ -125,10 +131,11 @@
   </ul>
 </aside>
 <!-- End Sidebar-->
+
  <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>IT Administration</h1>
+      <h1>Chief System Administration</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
@@ -136,58 +143,9 @@
         </ol>
       </nav>
     </div>
-    
-    <form action="create.php" method="POST">
-    <div class="row mb-3">
-        <label for="inputText" class="col-sm-2 col-form-label">Username</label>
-        <div class="col-sm-10">
-            <input type="text" name="User" class="form-control" id="inputText">
-        </div>
-    </div>
 
-    <div class="row mb-3">
-        <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
-        <div class="col-sm-10">
-            <input type="password" name="Pass" class="form-control" id="inputPassword">
-        </div>
-    </div>
-
-    <div class="row mb-3">
-        <label for="inputFullName" class="col-sm-2 col-form-label">Fullname</label>
-        <div class="col-sm-10">
-            <input type="text" name="FName" class="form-control" id="inputFullName">
-        </div>
-    </div> 
-
-    <div class="col-12">
-      <label for="dropdown">Type of User:</label> <br>
-      <select id="dropdown" name="Role" class="styled-select">
-      <option value="2">Admin</option>
-      <option value="3">Farmer</option>
-      </select>
-      </div>
-
-      <div class="row mb-3">
-        <label for="inputPassword" class="col-sm-2 col-form-label">Province</label>
-        <div class="col-sm-10">
-            <input type="text" name="Province" class="form-control" id="inputPassword">
-        </div>
-    </div>
-
-    <div class="row mb-3">
-        <label for="inputFullName" class="col-sm-2 col-form-label">City/Province</label>
-        <div class="col-sm-10">
-            <input type="text" name="Citymuni" class="form-control" id="inputFullName">
-        </div>
-    </div> 
-      
-    <div class="row mb-3">
-        <label class="col-sm-2 col-form-label"></label>
-        <div class="col-sm-10">
-            <button type="submit" value="Save" name="insert" class="flexible-wide-button2">Insert</button>
-        </div>
-    </div>
-</form>
+  
+   
 
 
 
@@ -251,7 +209,7 @@ echo '</div>';
       Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
     </div>
   </footer><!-- End Footer -->
-
+   
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
    <!-- Vendor JS Files -->

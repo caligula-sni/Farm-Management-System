@@ -14,7 +14,7 @@ if (!isset($_SESSION["UserName"])) {
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Crops Monitoring System</title>
+  <title>Farm Management System</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -48,7 +48,7 @@ if (!isset($_SESSION["UserName"])) {
     <div class="d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center">
         <img src="assets/img/logo.png" alt="">
-        <span class="d-none d-lg-block">Crop Monitoring Sys.</span>
+        <span class="d-none d-lg-block">Farm Management Sys.</span>
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
     </div><!-- End Logo -->
@@ -94,7 +94,13 @@ if (!isset($_SESSION["UserName"])) {
     <li class="nav-item">
       <a class="nav-link" href="crud/read.php">
         <i class="bi bi-person"></i>
-        <span>Adduser</span>
+        <span>User Management</span>
+      </a>
+    </li>
+     <li class="nav-item">
+      <a class="nav-link" href="crud/create.php">
+        <i class="bi bi-person"></i>
+        <span>User Registry</span>
       </a>
     </li>
     <li class="nav-item">
@@ -123,7 +129,7 @@ if (!isset($_SESSION["UserName"])) {
   <!-- Dropdown Container -->
 
    <div class="pagetitle">
-            <h1>IT Administration</h1>
+            <h1>Chief System Administration</h1>
             <nav>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>

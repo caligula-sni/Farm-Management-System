@@ -135,7 +135,7 @@
               <div class="d-flex justify-content-center py-4">
                 <a href="index.html" class="logo2 d-flex align-items-center w-auto">
                  
-                  <span class="d-none d-lg-block">Crops Monitoring System</span>
+                  <span class="d-none d-lg-block">Farm Management System<</span>
                 </a>
               </div><!-- End Logo -->
 
@@ -170,7 +170,7 @@
                     <div class="col-12">
                      <label for="dropdown">Choose an option:</label> <br>
                      <select id="dropdown" name="regRole" required class="styled-select">
-                     <option value="3">Farmer</option>
+                     <option value="1">Farmer</option>
                     </select>
                     </div>
 

@@ -32,13 +32,13 @@
                         
                         switch ($user["role_id"]) {
                             case 1:
-                                header("location:./page/users/superadmin/home.php");
+                                header("location:./page/users/farmers/home.php");
                                 break;
                             case 2:
                                 header("location:./page/users/admin/home.php");
                                 break;
                             case 3:
-                                header("location:./page/users/farmers/home.php");
+                                header("location:./page/users/superadmin/home.php");
                                 break;
                             default:
                                 $message = '<label>Wrong Data</label>';
@@ -109,7 +109,7 @@
 
               <div class="d-flex justify-content-center py-4">
                 <a href="index.html" class="logo2 d-flex align-items-center w-auto">
-                  <span class="d-none d-lg-block">Crops Monitoring System</span>
+                  <span class="d-none d-lg-block"><b>Farm Management System</b></span>
                 </a>
               </div><!-- End Logo -->
 

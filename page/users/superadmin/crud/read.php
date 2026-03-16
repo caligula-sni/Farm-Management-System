@@ -80,7 +80,7 @@
         </li>
     </nav>
 
-  </header><!-- End Header --> hi this is 
+  </header><!-- End Header -->
 
   <!-- ======= Sidebar ======= -->
   <aside id="sidebar" class="sidebar">
@@ -144,8 +144,7 @@
       </nav>
     </div>
 
-  
-   
+
 
 
 

@@ -87,10 +87,10 @@ $currentRoleId = $_SESSION['role_id'];
         <span>Homepage</span>
       </a>
     </li>
-    <li class="nav-item">
+   <li class="nav-item">
       <a class="nav-link" href="read.php">
         <i class="bi bi-person"></i>
-        <span>Adduser</span>
+        <span>User Management</span>
       </a>
     </li>
     <li class="nav-item">

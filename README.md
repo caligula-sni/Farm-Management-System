@@ -1,7 +1,7 @@
 # WFP
  WebProject
 
-HOW TO INITIALIZED A GITHUB REPO 
+HOW TO INITIALIZED A GITHUB REPO FROM A LOCAL FOLDER/DIRECTORY 
 
 1. Create a public or private repository in github
    - public or private

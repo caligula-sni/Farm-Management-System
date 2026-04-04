@@ -44,6 +44,7 @@ HOW TO CLONE A REPO TO A DIRECTORY
 
 3.cd repository
 
+this comment is just for testing out SFTP
 
 
 

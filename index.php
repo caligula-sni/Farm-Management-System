@@ -64,7 +64,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Crops Monitoring System</title>
+  <title>Farm Management System</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -125,7 +125,7 @@
 
                   <div class="pt-4 pb-2">
                     <h5 class="card-title text-center pb-0 fs-4">Login to Your Account</h5>
-                    <p class="text-center small">Enter your Username & Password to Sign in.</p>
+                    <p class="text-center small">Sign in to your Account.</p>
                   </div>
 
                   <form class="row g-3 needs-validation" method="POST" novalidate>
@@ -135,14 +135,14 @@
                       <div class="input-group has-validation">
                         
                         <input type="text" name="UserName" class="login-form" id="yourUsername" required>
-                        <div class="invalid-feedback">Please enter your username.</div>
+                        <div class="invalid-feedback">Enter your username.</div>
                       </div>
                     </div>
 
                     <div class="col-12">
                       <label for="PassWord" class="form-label">Password</label>
                       <input type="password" name="PassWord" class="login-form" id="yourPassword" required>
-                      <div class="invalid-feedback">Please enter your password!</div>
+                      <div class="invalid-feedback">Enter your password</div>
                     </div>
                       <br> <br>
                     
@@ -150,7 +150,7 @@
                       <button class="flexible-wide-button" name="login" value="login"type="submit">Login</button>
                     </div>
                     <div class="col-12">
-                      <p class="small mb-0">Don't have account? <a href="register.php">Create an account</a></p>
+                      <p class="small mb-0">Don't have account? <a href="register.php">Sign Up</a></p>
                     </div>
                   </form>
 

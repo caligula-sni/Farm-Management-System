@@ -1,58 +1,64 @@
+
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
-    session_start();
-    require_once './include/connect/dbcon.php';
+session_start();
+require_once './include/connect/dbcon.php';
 
-        try {
-            $pdoConnect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+try {
+    $pdoConnect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            // ... (previous code for user registration)
-            if (isset($_POST["login"])) {
-                if (empty($_POST["UserName"]) || empty ($_POST["PassWord"])) {
-                    $message = '<label>All fields are required</label>';
-                } else {
-                    $pdoQuery = "SELECT * FROM tbuser WHERE UserName = :UserName";
-                    $pdoResult = $pdoConnect->prepare($pdoQuery);
-                    $pdoResult->execute(['UserName' => $_POST["UserName"]]);
-                    $user = $pdoResult->fetch();
+    if (isset($_POST["login"])) {
 
-                    if ($user && password_verify($_POST["PassWord"], $user["PassWord"])) {
+        if (empty($_POST["UserName"]) || empty($_POST["PassWord"])) {
+            $message = '<label>All fields are required</label>';
+        } else {
 
-                        $_SESSION["UserName"] = $user["UserName"];
-                        $_SESSION["role_id"] = $user["role_id"];
-                        $_SESSION["id"] = $user["id"];
-                        $_SESSION["cm_id"] = $user["cm_id"];
-                        $_SESSION["province_id"] = $user['province_id'];
+            $pdoQuery = "SELECT * FROM tbuser WHERE UserName = :UserName";
+            $pdoResult = $pdoConnect->prepare($pdoQuery);
+            $pdoResult->execute(['UserName' => $_POST["UserName"]]);
+            $user = $pdoResult->fetch(PDO::FETCH_ASSOC);
 
-                        // Log the Log in action in audit trail with timestamp
-                        $loggedInUser = $_SESSION["UserName"];
-                        $pdoQuery = "INSERT INTO audit_trail (action, user) VALUES ('User logged in', :user)";
-                        $pdoResult = $pdoConnect->prepare($pdoQuery);
-                        $pdoResult->execute([':user' => $loggedInUser]);
-                        
-                        switch ($user["role_id"]) {
-                            case 1:
-                                header("location:./page/users/farmers/home.php");
-                                break;
-                            case 2:
-                                header("location:./page/users/admin/home.php");
-                                break;
-                            case 3:
-                                header("location:./page/users/superadmin/home.php");
-                                break;
-                            default:
-                                $message = '<label>Wrong Data</label>';
-                            }
-                        exit;
-                    } else {
+            if ($user && password_verify($_POST["PassWord"], $user["PassWord"])) {
+
+                $_SESSION["UserName"] = $user["UserName"];
+                $_SESSION["role_id"] = $user["role_id"];
+                $_SESSION["id"] = $user["id"];
+                $_SESSION["cm_id"] = $user["cm_id"];
+                $_SESSION["province_id"] = $user["province_id"];
+
+                // Audit trail
+                $pdoQuery = "INSERT INTO audit_trail (action, user) VALUES ('User logged in', :user)";
+                $pdoResult = $pdoConnect->prepare($pdoQuery);
+                $pdoResult->execute(['user' => $_SESSION["UserName"]]);
+
+                switch ($user["role_id"]) {
+                    case 1:
+                        header("Location: ./page/users/farmers/home.php");
+                        break;
+                    case 2:
+                        header("Location: ./page/users/admin/home.php");
+                        break;
+                    case 3:
+                        header("Location: ./page/users/superadmin/home.php");
+                        break;
+                    default:
                         $message = '<label>Wrong Data</label>';
-                    }
                 }
+                exit;
+
+            } else {
+                $message = '<label>Wrong Data</label>';
             }
-        } catch (PDOException $error ) {
-            $message = $error->getMessage();
         }
+    }
+
+} catch (PDOException $error) {
+    $message = $error->getMessage();
+}
 ?>
+    
 
         
 
@@ -109,7 +115,7 @@
 
               <div class="d-flex justify-content-center py-4">
                 <a href="index.html" class="logo2 d-flex align-items-center w-auto">
-                  <span class="d-none d-lg-block"><b>Farm Management System</b></span>
+                  <span class="d-none d-lg-block"><b>Farm Management System </b></span>
                 </a>
               </div><!-- End Logo -->
 

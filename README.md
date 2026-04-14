@@ -3,6 +3,7 @@
 
 HOW TO INITIALIZED A GITHUB REPO FROM A LOCAL FOLDER/DIRECTORY 
 i love ciana . testing123
+GHOST TOWMN - ye
 1. Create a public or private repository in github
    - public or private
    - no ReadMe

@@ -12,5 +12,5 @@
     }
     unset($_SESSION['user']); // Remove the argument from session_unset
     session_destroy();
-    header("Location: /Farm-Management-System/index.php");
+    header("Location: ../../../../index.php");
 ?>

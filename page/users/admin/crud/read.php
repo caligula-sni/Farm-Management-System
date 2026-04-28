@@ -47,7 +47,7 @@
             if (isset($_SESSION['UserName'])) {
                 echo '<h3>Welcome, ' . $_SESSION['UserName'] . '</h3>';
             } else {
-                header("location: testWPF/index.php");
+                header("location: ../../../../index.php");
             }
 
             $currentUserId = $_SESSION['id'];

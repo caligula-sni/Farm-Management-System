@@ -1,3 +1,4 @@
+DROP DATABASE IF EXISTS dbfarm2;
 -- Create database
 CREATE DATABASE IF NOT EXISTS dbfarm2;
 USE dbfarm2;
